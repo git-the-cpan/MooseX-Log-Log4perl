@@ -23,7 +23,7 @@ __ENDCFG__
 {
 	package EasyLogTest;
 
-	use Moose;
+	use Moo;
 	with 'MooseX::Log::Log4perl::Easy';
 
 	sub test_easy {
@@ -35,13 +35,13 @@ __ENDCFG__
 		$self->log_error('big');
 		$self->log_fatal('brains');
 	}
-	
+
 	sub test_log {
 		my ($self) = @_;
 		$self->log("SPECIAL")->info('BAZ');
 		$self->log->debug('foo');
 		$self->log->error('bar');
-		
+
 	}
 }
 
